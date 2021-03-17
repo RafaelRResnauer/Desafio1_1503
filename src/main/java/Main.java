@@ -24,9 +24,7 @@ public class Main {
                 if(!Character.isLetter(variableName.charAt(i)) && !Character.isDigit(variableName.charAt(i)) && variableName.charAt(i) != 95){
                     System.out.println("Character must be a number, a letter or an underscore!");
                     System.exit(0);
-                }else {
-                    state = state.nextState(variableName.charAt(i));
-                }
+                }else state = state.nextState(variableName.charAt(i));
             }
         }else{
             System.out.println("Number of characters reached!");

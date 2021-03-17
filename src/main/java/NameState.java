@@ -1,4 +1,15 @@
 public enum NameState {
+    // wrong
+    SWrong{
+        @Override
+        public NameState nextState(char a){
+            return this;
+        }
+        @Override
+        public boolean isOver(){
+            return false;
+        }
+    },
     // default
     S0{
         @Override
@@ -8,7 +19,7 @@ public enum NameState {
             }else if(a=='b'){
                 return S5;
             }else{
-                return this;
+                return SWrong;
             }
         }
         @Override
@@ -23,7 +34,7 @@ public enum NameState {
             if(a=='u'){
                 return S2;
             }else{
-                return S0;
+                return SWrong;
             }
         }
         @Override
@@ -37,7 +48,7 @@ public enum NameState {
             if(a=='t'){
                 return S3;
             }else{
-                return S0;
+                return SWrong;
             }
         }
         @Override
@@ -51,7 +62,7 @@ public enum NameState {
             if(a=='o'){
                 return S4;
             }else{
-                return S0;
+                return SWrong;
             }
         }
         @Override
@@ -62,7 +73,7 @@ public enum NameState {
     S4{
         @Override
         public NameState nextState(char a){
-            return S0;
+            return SWrong;
         }
         @Override
         public boolean isOver(){
@@ -76,7 +87,7 @@ public enum NameState {
             if(a=='r'){
                 return S6;
             }else{
-                return S0;
+                return SWrong;
             }
         }
         @Override
@@ -90,7 +101,7 @@ public enum NameState {
             if(a=='e'){
                 return S7;
             }else{
-                return S0;
+                return SWrong;
             }
         }
         @Override
@@ -104,7 +115,7 @@ public enum NameState {
             if(a=='a'){
                 return S8;
             }else{
-                return S0;
+                return SWrong;
             }
         }
         @Override
@@ -118,7 +129,7 @@ public enum NameState {
             if(a=='k'){
                 return S9;
             }else{
-                return S0;
+                return SWrong;
             }
         }
         @Override
@@ -129,7 +140,7 @@ public enum NameState {
     S9{
         @Override
         public NameState nextState(char a){
-            return S0;
+            return SWrong;
         }
         @Override
         public boolean isOver(){

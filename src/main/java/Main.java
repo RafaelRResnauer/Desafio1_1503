@@ -32,6 +32,7 @@ public class Main {
             System.out.println("Variable name accepted!");
         }
         myObj.close();
+        System.exit(0);
     }
 }
 

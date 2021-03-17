@@ -392,7 +392,7 @@ public enum NameState {
         @Override
         public NameState nextState(char a){
             if(a=='u'){
-                return S27;
+                return S34;
             }else{
                 return SWrong;
             }
@@ -477,6 +477,59 @@ public enum NameState {
         @Override
         public NameState nextState(char a){
             return SWrong;
+        }
+        @Override
+        public boolean isOver(){
+            return true;
+        }
+    },
+    // double
+    S34{
+        @Override
+        public NameState nextState(char a){
+            if(a=='b'){
+                return S35;
+            }else{
+                return SWrong;
+            }
+        }
+        @Override
+        public boolean isOver(){
+            return false;
+        }
+    },
+    S35{
+        @Override
+        public NameState nextState(char a){
+            if(a=='l'){
+                return S36;
+            }else{
+                return SWrong;
+            }
+        }
+        @Override
+        public boolean isOver(){
+            return false;
+        }
+    },
+    S36{
+        @Override
+        public NameState nextState(char a){
+            if(a=='e'){
+                return S37;
+            }else{
+                return SWrong;
+            }
+        }
+        @Override
+        public boolean isOver(){
+            return false;
+        }
+    },
+    S37{
+        @Override
+        public NameState nextState(char a){
+                return SWrong;
         }
         @Override
         public boolean isOver(){

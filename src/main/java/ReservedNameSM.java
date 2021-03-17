@@ -1,8 +1,8 @@
-public enum NameState {
+public enum ReservedNameSM {
     // wrong
     SWrong{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             return this;
         }
         @Override
@@ -13,7 +13,7 @@ public enum NameState {
     // default
     S0{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='a'){
                 return S1;
             }else if(a=='b'){
@@ -56,7 +56,7 @@ public enum NameState {
     // auto
     S1{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='u'){
                 return S2;
             }else{
@@ -70,7 +70,7 @@ public enum NameState {
     },
     S2{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='t'){
                 return S3;
             }else{
@@ -84,7 +84,7 @@ public enum NameState {
     },
     S3{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='o'){
                 return S4;
             }else{
@@ -98,7 +98,7 @@ public enum NameState {
     },
     S4{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             return SWrong;
         }
         @Override
@@ -109,7 +109,7 @@ public enum NameState {
     // break
     S5{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='r'){
                 return S6;
             }else{
@@ -123,7 +123,7 @@ public enum NameState {
     },
     S6{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='e'){
                 return S7;
             }else{
@@ -137,7 +137,7 @@ public enum NameState {
     },
     S7{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='a'){
                 return S8;
             }else{
@@ -151,7 +151,7 @@ public enum NameState {
     },
     S8{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='k'){
                 return S9;
             }else{
@@ -165,7 +165,7 @@ public enum NameState {
     },
     S9{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             return SWrong;
         }
         @Override
@@ -176,7 +176,7 @@ public enum NameState {
     // case
     S10{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='a'){
                 return S11;
             }else if(a=='h'){
@@ -194,7 +194,7 @@ public enum NameState {
     },
     S11{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='s'){
                 return S12;
             }else{
@@ -208,7 +208,7 @@ public enum NameState {
     },
     S12{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='e'){
                 return S13;
             }else{
@@ -222,7 +222,7 @@ public enum NameState {
     },
     S13{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             return SWrong;
         }
         @Override
@@ -233,7 +233,7 @@ public enum NameState {
     // char
     S14{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='a'){
                 return S15;
             }else{
@@ -247,7 +247,7 @@ public enum NameState {
     },
     S15{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='r'){
                 return S16;
             }else{
@@ -261,7 +261,7 @@ public enum NameState {
     },
     S16{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             return SWrong;
         }
         @Override
@@ -272,7 +272,7 @@ public enum NameState {
     // continue
     S17{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='n'){
                 return S18;
             }else{
@@ -286,7 +286,7 @@ public enum NameState {
     },
     S18{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='t'){
                 return S19;
             }else if(a=='s'){
@@ -302,7 +302,7 @@ public enum NameState {
     },
     S19{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='i'){
                 return S20;
             }else{
@@ -316,7 +316,7 @@ public enum NameState {
     },
     S20{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='n'){
                 return S21;
             }else{
@@ -330,7 +330,7 @@ public enum NameState {
     },
     S21{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='u'){
                 return S22;
             }else{
@@ -344,7 +344,7 @@ public enum NameState {
     },
     S22{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='e'){
                 return S23;
             }else{
@@ -358,7 +358,7 @@ public enum NameState {
     },
     S23{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             return SWrong;
 
         }
@@ -370,7 +370,7 @@ public enum NameState {
     // const
     S24{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='t'){
                 return S25;
             }else{
@@ -384,7 +384,7 @@ public enum NameState {
     },
     S25{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             return SWrong;
 
         }
@@ -396,7 +396,7 @@ public enum NameState {
     // do
     S26{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='o'){
                 return S27;
             }else if(a=='e'){
@@ -412,7 +412,7 @@ public enum NameState {
     },
     S27{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='u'){
                 return S34;
             }else{
@@ -427,7 +427,7 @@ public enum NameState {
     // default
     S28{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='f'){
                 return S29;
             }else{
@@ -441,7 +441,7 @@ public enum NameState {
     },
     S29{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='a'){
                 return S30;
             }else{
@@ -455,7 +455,7 @@ public enum NameState {
     },
     S30{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='u'){
                 return S31;
             }else{
@@ -469,7 +469,7 @@ public enum NameState {
     },
     S31{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='l'){
                 return S32;
             }else{
@@ -483,7 +483,7 @@ public enum NameState {
     },
     S32{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='t'){
                 return S33;
             }else{
@@ -497,7 +497,7 @@ public enum NameState {
     },
     S33{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             return SWrong;
         }
         @Override
@@ -508,7 +508,7 @@ public enum NameState {
     // double
     S34{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='b'){
                 return S35;
             }else{
@@ -522,7 +522,7 @@ public enum NameState {
     },
     S35{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='l'){
                 return S36;
             }else{
@@ -536,7 +536,7 @@ public enum NameState {
     },
     S36{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='e'){
                 return S37;
             }else{
@@ -550,7 +550,7 @@ public enum NameState {
     },
     S37{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
                 return SWrong;
         }
         @Override
@@ -561,7 +561,7 @@ public enum NameState {
     // else
     S38{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='l'){
                 return S39;
             }else if(a=='n'){
@@ -579,7 +579,7 @@ public enum NameState {
     },
     S39{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='s'){
                 return S40;
             }else{
@@ -593,7 +593,7 @@ public enum NameState {
     },
     S40{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='e'){
                 return S41;
             }else{
@@ -607,7 +607,7 @@ public enum NameState {
     },
     S41{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             return SWrong;
         }
         @Override
@@ -618,7 +618,7 @@ public enum NameState {
     // extern
     S42{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='u'){
                 return S43;
             }else{
@@ -632,7 +632,7 @@ public enum NameState {
     },
     S43{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='m'){
                 return S44;
             }else{
@@ -646,7 +646,7 @@ public enum NameState {
     },
     S44{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             return SWrong;
         }
         @Override
@@ -657,7 +657,7 @@ public enum NameState {
     // extern
     S45{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='t'){
                 return S46;
             }else{
@@ -671,7 +671,7 @@ public enum NameState {
     },
     S46{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='e'){
                 return S47;
             }else{
@@ -685,7 +685,7 @@ public enum NameState {
     },
     S47{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='r'){
                 return S48;
             }else{
@@ -699,7 +699,7 @@ public enum NameState {
     },
     S48{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='n'){
                 return S49;
             }else{
@@ -713,7 +713,7 @@ public enum NameState {
     },
     S49{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             return SWrong;
         }
         @Override
@@ -724,7 +724,7 @@ public enum NameState {
     // for
     S50{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='o'){
                 return S51;
             }else if(a=='l'){
@@ -740,7 +740,7 @@ public enum NameState {
     },
     S51{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='r'){
                 return S52;
             }else{
@@ -754,7 +754,7 @@ public enum NameState {
     },
     S52{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             return SWrong;
 
         }
@@ -765,7 +765,7 @@ public enum NameState {
     },
     S53{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='o'){
                 return S54;
             }else{
@@ -779,7 +779,7 @@ public enum NameState {
     },
     S54{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='a'){
                 return S55;
             }else{
@@ -793,7 +793,7 @@ public enum NameState {
     },
     S55{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='t'){
                 return S56;
             }else{
@@ -807,7 +807,7 @@ public enum NameState {
     },
     S56{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             return SWrong;
         }
         @Override
@@ -818,7 +818,7 @@ public enum NameState {
     // goto
     S57{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='o'){
                 return S58;
             }else{
@@ -832,7 +832,7 @@ public enum NameState {
     },
     S58{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='t'){
                 return S59;
             }else{
@@ -846,7 +846,7 @@ public enum NameState {
     },
     S59{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='o'){
                 return S60;
             }else{
@@ -860,7 +860,7 @@ public enum NameState {
     },
     S60{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             return SWrong;
         }
         @Override
@@ -871,7 +871,7 @@ public enum NameState {
     // if
     S61{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='f'){
                 return S62;
             }else if(a=='n'){
@@ -887,7 +887,7 @@ public enum NameState {
     },
     S62{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             return SWrong;
         }
         @Override
@@ -898,7 +898,7 @@ public enum NameState {
     // int
     S63{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='t'){
                 return S64;
             }else{
@@ -912,7 +912,7 @@ public enum NameState {
     },
     S64{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
                 return SWrong;
         }
         @Override
@@ -923,7 +923,7 @@ public enum NameState {
     // long
     S65{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='o'){
                 return S66;
             }else{
@@ -937,7 +937,7 @@ public enum NameState {
     },
     S66{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='n'){
                 return S67;
             }else{
@@ -951,7 +951,7 @@ public enum NameState {
     },
     S67{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='g'){
                 return S68;
             }else{
@@ -965,7 +965,7 @@ public enum NameState {
     },
     S68{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
                 return SWrong;
         }
         @Override
@@ -976,7 +976,7 @@ public enum NameState {
     // register
     S69{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='e'){
                 return S70;
             }else{
@@ -990,7 +990,7 @@ public enum NameState {
     },
     S70{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='g'){
                 return S71;
             }else if(a=='t'){
@@ -1006,7 +1006,7 @@ public enum NameState {
     },
     S71{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='i'){
                 return S72;
             }else{
@@ -1020,7 +1020,7 @@ public enum NameState {
     },
     S72{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='s'){
                 return S73;
             }else{
@@ -1034,7 +1034,7 @@ public enum NameState {
     },
     S73{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='t'){
                 return S74;
             }else{
@@ -1048,7 +1048,7 @@ public enum NameState {
     },
     S74{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='e'){
                 return S75;
             }else{
@@ -1062,7 +1062,7 @@ public enum NameState {
     },
     S75{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='r'){
                 return S76;
             }else{
@@ -1076,7 +1076,7 @@ public enum NameState {
     },
     S76{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             return SWrong;
         }
         @Override
@@ -1087,7 +1087,7 @@ public enum NameState {
     // return
     S77{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='u'){
                 return S78;
             }else{
@@ -1101,7 +1101,7 @@ public enum NameState {
     },
     S78{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='r'){
                 return S79;
             }else{
@@ -1115,7 +1115,7 @@ public enum NameState {
     },
     S79{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='n'){
                 return S80;
             }else{
@@ -1129,7 +1129,7 @@ public enum NameState {
     },
     S80{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
                 return SWrong;
         }
         @Override
@@ -1140,7 +1140,7 @@ public enum NameState {
     // signed
     S81{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='i'){
                 return S82;
             }else if(a=='t'){
@@ -1160,7 +1160,7 @@ public enum NameState {
     },
     S82{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='g'){
                 return S83;
             }else if(a=='z'){
@@ -1176,7 +1176,7 @@ public enum NameState {
     },
     S83{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='n'){
                 return S84;
             }else{
@@ -1192,7 +1192,7 @@ public enum NameState {
     },
     S84{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='e'){
                 return S85;
             }else{
@@ -1207,7 +1207,7 @@ public enum NameState {
     },
     S85{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='d'){
                 return S86;
             }else{
@@ -1222,7 +1222,7 @@ public enum NameState {
     },
     S86{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             return SWrong;
         }
         @Override
@@ -1233,7 +1233,7 @@ public enum NameState {
     // sizeof
     S87{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='e'){
                 return S88;
             }else{
@@ -1249,7 +1249,7 @@ public enum NameState {
     },
     S88{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='o'){
                 return S89;
             }else{
@@ -1265,7 +1265,7 @@ public enum NameState {
     },
     S89{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='f'){
                 return S90;
             }else{
@@ -1281,7 +1281,7 @@ public enum NameState {
     },
     S90{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
                 return SWrong;
         }
         @Override
@@ -1293,7 +1293,7 @@ public enum NameState {
     // static
     S91{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='a'){
                 return S92;
             }else if(a=='r'){
@@ -1311,7 +1311,7 @@ public enum NameState {
     },
     S92{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='t'){
                 return S93;
             }else{
@@ -1327,7 +1327,7 @@ public enum NameState {
     },
     S93{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='i'){
                 return S94;
             }else{
@@ -1343,7 +1343,7 @@ public enum NameState {
     },
     S94{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='c'){
                 return S95;
             }else{
@@ -1359,7 +1359,7 @@ public enum NameState {
     },
     S95{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
                 return SWrong;
         }
         @Override
@@ -1372,7 +1372,7 @@ public enum NameState {
     // struct
     S96{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='u'){
                 return S97;
             }else{
@@ -1388,7 +1388,7 @@ public enum NameState {
     },
     S97{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='c'){
                 return S98;
             }else{
@@ -1404,7 +1404,7 @@ public enum NameState {
     },
     S98{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='t'){
                 return S99;
             }else{
@@ -1420,7 +1420,7 @@ public enum NameState {
     },
     S99{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
                 return SWrong;
         }
         @Override
@@ -1432,7 +1432,7 @@ public enum NameState {
     // short
     S100{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='o'){
                 return S101;
             }else{
@@ -1448,7 +1448,7 @@ public enum NameState {
     },
     S101{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='r'){
                 return S102;
             }else{
@@ -1464,7 +1464,7 @@ public enum NameState {
     },
     S102{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='t'){
                 return S103;
             }else{
@@ -1480,7 +1480,7 @@ public enum NameState {
     },
     S103{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             return SWrong;
         }
         @Override
@@ -1492,7 +1492,7 @@ public enum NameState {
     // switch
     S104{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='i'){
                 return S105;
             }else{
@@ -1508,7 +1508,7 @@ public enum NameState {
     },
     S105{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='t'){
                 return S106;
             }else{
@@ -1524,7 +1524,7 @@ public enum NameState {
     },
     S106{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='c'){
                 return S107;
             }else{
@@ -1540,7 +1540,7 @@ public enum NameState {
     },
     S107{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='h'){
                 return S108;
             }else{
@@ -1556,7 +1556,7 @@ public enum NameState {
     },
     S108{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             return SWrong;
         }
         @Override
@@ -1568,7 +1568,7 @@ public enum NameState {
     // typedef
     S109{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='y'){
                 return S110;
             }else{
@@ -1583,7 +1583,7 @@ public enum NameState {
     },
     S110{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='p'){
                 return S111;
             }else{
@@ -1599,7 +1599,7 @@ public enum NameState {
     },
     S111{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='e'){
                 return S112;
             }else{
@@ -1615,7 +1615,7 @@ public enum NameState {
     },
     S112{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='d'){
                 return S113;
             }else{
@@ -1631,7 +1631,7 @@ public enum NameState {
     },
     S113{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='e'){
                 return S114;
             }else{
@@ -1647,7 +1647,7 @@ public enum NameState {
     },
     S114{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='f'){
                 return S115;
             }else{
@@ -1662,7 +1662,7 @@ public enum NameState {
     },
     S115{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             return SWrong;
         }
         @Override
@@ -1674,7 +1674,7 @@ public enum NameState {
     // union
     S116{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='n'){
                 return S117;
             }else{
@@ -1690,7 +1690,7 @@ public enum NameState {
     },
     S117{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='i'){
                 return S118;
             }else if(a=='s'){
@@ -1708,7 +1708,7 @@ public enum NameState {
     },
     S118{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='o'){
                 return S119;
             }else{
@@ -1724,7 +1724,7 @@ public enum NameState {
     },
     S119{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='n'){
                 return S120;
             }else{
@@ -1740,7 +1740,7 @@ public enum NameState {
     },
     S120{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
                 return SWrong;
         }
         @Override
@@ -1752,7 +1752,7 @@ public enum NameState {
     // unsigned
     S121{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='i'){
                 return S122;
             }else{
@@ -1768,7 +1768,7 @@ public enum NameState {
     },
     S122{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='g'){
                 return S123;
             }else{
@@ -1784,7 +1784,7 @@ public enum NameState {
     },
     S123{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='n'){
                 return S124;
             }else{
@@ -1800,7 +1800,7 @@ public enum NameState {
     },
     S124{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='e'){
                 return S125;
             }else{
@@ -1816,7 +1816,7 @@ public enum NameState {
     },
     S125{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='d'){
                 return S126;
             }else{
@@ -1832,7 +1832,7 @@ public enum NameState {
     },
     S126{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             return SWrong;
         }
         @Override
@@ -1844,7 +1844,7 @@ public enum NameState {
     // void
     S127{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='o'){
                 return S128;
             }else{
@@ -1860,7 +1860,7 @@ public enum NameState {
     },
     S128{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='i'){
                 return S129;
             }else if(a=='l'){
@@ -1878,7 +1878,7 @@ public enum NameState {
     },
     S129{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='d'){
                 return S130;
             }else{
@@ -1894,7 +1894,7 @@ public enum NameState {
     },
     S130{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             return SWrong;
         }
         @Override
@@ -1906,7 +1906,7 @@ public enum NameState {
     // volatile
     S131{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='a'){
                 return S132;
             }else{
@@ -1922,7 +1922,7 @@ public enum NameState {
     },
     S132{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='t'){
                 return S133;
             }else{
@@ -1938,7 +1938,7 @@ public enum NameState {
     },
     S133{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='i'){
                 return S134;
             }else{
@@ -1954,7 +1954,7 @@ public enum NameState {
     },
     S134{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='l'){
                 return S135;
             }else{
@@ -1970,7 +1970,7 @@ public enum NameState {
     },
     S135{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='e'){
                 return S136;
             }else{
@@ -1986,7 +1986,7 @@ public enum NameState {
     },
     S136{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             return SWrong;
         }
         @Override
@@ -1998,7 +1998,7 @@ public enum NameState {
     // while
     S137{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='h'){
                 return S138;
             }else{
@@ -2014,7 +2014,7 @@ public enum NameState {
     },
     S138{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='i'){
                 return S139;
             }else{
@@ -2030,7 +2030,7 @@ public enum NameState {
     },
     S139{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='l'){
                 return S140;
             }else{
@@ -2046,7 +2046,7 @@ public enum NameState {
     },
     S140{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             if(a=='e'){
                 return S141;
             }else{
@@ -2062,7 +2062,7 @@ public enum NameState {
     },
     S141{
         @Override
-        public NameState nextState(char a){
+        public ReservedNameSM nextState(char a){
             return SWrong;
         }
         @Override
@@ -2072,6 +2072,6 @@ public enum NameState {
         }
     };
 
-    public abstract NameState nextState(char a);
+    public abstract ReservedNameSM nextState(char a);
     public abstract boolean isOver();
 }

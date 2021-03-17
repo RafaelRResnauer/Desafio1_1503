@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         // State
-        NameState state = NameState.S0;
+        ReservedNameSM state = ReservedNameSM.S0;
 
         // Getting user input
         Scanner myObj = new Scanner(System.in);

@@ -2,34 +2,31 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        // State
-        ReservedNameSM state = ReservedNameSM.S0;
+        // States
+        ReservedNameSM reservedState = ReservedNameSM.S0;
+        NamingRulesSM namingState = NamingRulesSM.Start;
 
         // Getting user input
         Scanner myObj = new Scanner(System.in);
         System.out.print("Enter variable name:");
         String variableName = myObj.nextLine();
 
-        // Checking if var name starts correctly
-        if(!Character.isLetter(variableName.charAt(0)) && variableName.charAt(0) != 95){
-            System.out.println("Variable name must start with a letter or an underscore!");
-            System.exit(0);
-        }
-
         // Verifies length
         if(variableName.length() <= 31){
             // Verifies if variable name has restricted characters or if the name is a reserved word
             for(int i = 0; i < variableName.length(); i++){
-                if(!Character.isLetter(variableName.charAt(i)) && !Character.isDigit(variableName.charAt(i)) && variableName.charAt(i) != 95){
-                    System.out.println("Character must be a number, a letter or an underscore!");
+                reservedState = reservedState.nextState(variableName.charAt(i));
+                namingState = namingState.nextState(variableName.charAt(i));
+                if(namingState.isOver()){
+                    System.out.println("Naming conventions not followed!");
                     System.exit(0);
-                }else state = state.nextState(variableName.charAt(i));
+                }
             }
         }else{
             System.out.println("Number of characters reached!");
             System.exit(0);
         }
-        if(state.isOver()){
+        if(reservedState.isOver()){
             System.out.println("You used a reserved name!");
         }else {
             System.out.println("Variable name accepted!");

@@ -31,6 +31,7 @@ public class Main {
         }else {
             System.out.println("Variable name accepted!");
         }
+        myObj.close();
     }
 }
 

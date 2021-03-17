@@ -26,17 +26,17 @@ public class Main {
                     System.exit(0);
                 }else {
                     state = state.nextState(variableName.charAt(i));
-                    if(state.isOver()){
-                        System.out.println("You used a reserved name!");
-                        System.exit(0);
-                    }
                 }
             }
         }else{
             System.out.println("Number of characters reached!");
             System.exit(0);
         }
-        System.out.println("Variable name accepted!");
+        if(state.isOver()){
+            System.out.println("You used a reserved name!");
+        }else {
+            System.out.println("Variable name accepted!");
+        }
     }
 }
 

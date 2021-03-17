@@ -1,2 +1,2 @@
-# Teste com máquinas de estado
-Teste para trabalhar com máquinas de estado
+# State Machine Test 
+Small state machine test

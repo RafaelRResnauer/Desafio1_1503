@@ -1137,10 +1137,17 @@ public enum NameState {
             return true;
         }
     },
+    // signed
     S81{
         @Override
         public NameState nextState(char a){
             if(a=='i'){
+                return S82;
+            }else if(a=='t'){
+                return S91;
+            }else if(a=='h'){
+                return S81;
+            }else if(a=='w'){
                 return S81;
             }else{
                 return SWrong;
@@ -1149,6 +1156,277 @@ public enum NameState {
         @Override
         public boolean isOver(){
             return false;
+        }
+    },
+    S82{
+        @Override
+        public NameState nextState(char a){
+            if(a=='g'){
+                return S83;
+            }else if(a=='z'){
+                return S87;
+            }else{
+                return SWrong;
+            }
+        }
+        @Override
+        public boolean isOver(){
+            return false;
+        }
+    },
+    S83{
+        @Override
+        public NameState nextState(char a){
+            if(a=='n'){
+                return S84;
+            }else{
+                return SWrong;
+            }
+        }
+        @Override
+        public boolean isOver()
+        {
+            return false;
+
+        }
+    },
+    S84{
+        @Override
+        public NameState nextState(char a){
+            if(a=='e'){
+                return S85;
+            }else{
+                return SWrong;
+            }
+        }
+        @Override
+        public boolean isOver(){
+
+            return false;
+        }
+    },
+    S85{
+        @Override
+        public NameState nextState(char a){
+            if(a=='d'){
+                return S86;
+            }else{
+                return SWrong;
+            }
+        }
+        @Override
+        public boolean isOver(){
+
+            return false;
+        }
+    },
+    S86{
+        @Override
+        public NameState nextState(char a){
+            return SWrong;
+        }
+        @Override
+        public boolean isOver(){
+            return true;
+        }
+    },
+    // sizeof
+    S87{
+        @Override
+        public NameState nextState(char a){
+            if(a=='e'){
+                return S88;
+            }else{
+                return SWrong;
+            }
+        }
+        @Override
+        public boolean isOver()
+        {
+            return false;
+
+        }
+    },
+    S88{
+        @Override
+        public NameState nextState(char a){
+            if(a=='o'){
+                return S89;
+            }else{
+                return SWrong;
+            }
+        }
+        @Override
+        public boolean isOver()
+        {
+            return false;
+
+        }
+    },
+    S89{
+        @Override
+        public NameState nextState(char a){
+            if(a=='f'){
+                return S90;
+            }else{
+                return SWrong;
+            }
+        }
+        @Override
+        public boolean isOver()
+        {
+            return false;
+
+        }
+    },
+    S90{
+        @Override
+        public NameState nextState(char a){
+                return SWrong;
+        }
+        @Override
+        public boolean isOver()
+        {
+            return true;
+        }
+    },
+    // static
+    S91{
+        @Override
+        public NameState nextState(char a){
+            if(a=='a'){
+                return S92;
+            }else if(a=='r'){
+                return S96;
+            }else{
+                return SWrong;
+            }
+        }
+        @Override
+        public boolean isOver()
+        {
+            return false;
+
+        }
+    },
+    S92{
+        @Override
+        public NameState nextState(char a){
+            if(a=='t'){
+                return S93;
+            }else{
+                return SWrong;
+            }
+        }
+        @Override
+        public boolean isOver()
+        {
+            return false;
+
+        }
+    },
+    S93{
+        @Override
+        public NameState nextState(char a){
+            if(a=='i'){
+                return S94;
+            }else{
+                return SWrong;
+            }
+        }
+        @Override
+        public boolean isOver()
+        {
+            return false;
+
+        }
+    },
+    S94{
+        @Override
+        public NameState nextState(char a){
+            if(a=='c'){
+                return S95;
+            }else{
+                return SWrong;
+            }
+        }
+        @Override
+        public boolean isOver()
+        {
+            return false;
+
+        }
+    },
+    S95{
+        @Override
+        public NameState nextState(char a){
+                return SWrong;
+        }
+        @Override
+        public boolean isOver()
+        {
+            return true;
+
+        }
+    },
+    // struct
+    S96{
+        @Override
+        public NameState nextState(char a){
+            if(a=='u'){
+                return S97;
+            }else{
+                return SWrong;
+            }
+        }
+        @Override
+        public boolean isOver()
+        {
+            return false;
+
+        }
+    },
+    S97{
+        @Override
+        public NameState nextState(char a){
+            if(a=='c'){
+                return S98;
+            }else{
+                return SWrong;
+            }
+        }
+        @Override
+        public boolean isOver()
+        {
+            return false;
+
+        }
+    },
+    S98{
+        @Override
+        public NameState nextState(char a){
+            if(a=='t'){
+                return S99;
+            }else{
+                return SWrong;
+            }
+        }
+        @Override
+        public boolean isOver()
+        {
+            return false;
+
+        }
+    },
+    S99{
+        @Override
+        public NameState nextState(char a){
+                return SWrong;
+        }
+        @Override
+        public boolean isOver()
+        {
+            return true;
         }
     };
 

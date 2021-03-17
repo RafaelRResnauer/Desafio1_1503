@@ -1,7 +1,15 @@
 import java.util.Scanner;
 
 public class Main {
+    public enum NameState{
+        s0,
+        s1,
+        s2,
+        s3,
+        s4
+    }
     public static void main(String[] args) {
+        NameState state = NameState.s0;
         Scanner myObj = new Scanner(System.in);
         System.out.print("Enter variable name:");
 

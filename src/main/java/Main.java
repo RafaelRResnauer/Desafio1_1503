@@ -18,7 +18,6 @@ public class Main {
 
         // Verifies length
         if(variableName.length() <= 31){
-
             // Verifies if variable name has restricted characters or if the name is a reserved word
             for(int i = 0; i < variableName.length(); i++){
                 if(!Character.isLetter(variableName.charAt(i)) && !Character.isDigit(variableName.charAt(i)) && variableName.charAt(i) != 95){
